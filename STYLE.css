@@ -1,3 +1,6 @@
     div#img {
         background-color: blue;
     }
+    .answer {
+        display: none;
+    }

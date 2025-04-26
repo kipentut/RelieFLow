@@ -8,6 +8,137 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+     <!-- Row 1: Navigation Bar -->
+     <nav>
+        <div class="container-fluid">
+            <h3><a href="INDEX.html">RelieFlow</a></h3>
+            <div>
+                <ul>
+                    <li><a href="INDEX.html">Home</a></li>
+                    <li><a href="#">About Us</a>
+                        <ul>
+                            <li><a href="Team_Values.html">Our Team & Values</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Get Involved</a>
+                        <ul>
+                            <li><a href="system.html">What We Do</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="Donate.html">DONATE</a></h3></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Row 2: FAQs banner -->
+    <header>
+        <div class="container-fluid">
+            <h1>Frequently Asked Questions</h1>
+            <h4>Find answers to your most frequently asked questions</h4>
+        </div>
+    </header>
+    <!-- Row 3: FAQs -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <table class="table table-hover table-bordered text-center">
+                    <tr>
+                        <th>GENERAL INFO</th>
+                        <th>VOLUNTEERING & INVOLVEMENT</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer1')">What is RelieFlow?</p>
+                            <p id="answer1" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer4')">How can I volunteer?</p>
+                            <p id="answer4" class="answer">answer</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer2')">Who runs RelieFlow?</p>
+                            <p id="answer2" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer5')">Do I need experience to help?</p>
+                            <p id="answer5" class="answer">answer</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer3')">Where do you Operate?</p>
+                            <p id="answer3" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer6')">Can I start a fundraiser with RelieFlow?</p>
+                            <p id="answer6" class="answer">answer</p>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <table class="table table-hover table-bordered text-center">
+                    <tr>
+                        <th>DONATIONS</th>
+                        <th>RECEIVING HELP</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer7')">How can I donate?</p>
+                            <p id="answer7" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer11')">I was affected by a disaster. How can I get help?</p>
+                            <p id="answer11" class="answer">answer</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer8')">Where does my donation go?</p>
+                            <p id="answer8" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer12')">What kind of aid does RelieFlow provide?</p>
+                            <p id="answer12" class="answer">answer</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer10')">Can I donate goods instead of money?</p>
+                            <p id="answer10" class="answer">answer</p>
+                        </td>
+                        <td>
+                            <p class="question" onclick="toggleAnswer('answer13')">Do I need to register?</p>
+                            <p id="answer13" class="answer">answer</p>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+    }
+    </script>
+    <!-- Row 4: Footer -->
+    <footer id="contact">
+        <div class="container-fluid">
+            <p>&copy; 2025 RelieFlow. Empowering communities, one step at a time.</p>
+            <p>Contact us at <a href="mailto:RelieFlow.Donate@gmail.com">RelieFlow.Donate@gmail.com</a></p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
