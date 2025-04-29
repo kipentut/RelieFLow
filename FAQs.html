@@ -10,28 +10,29 @@
 <body>
      <!-- Row 1: Navigation Bar -->
      <nav>
-        <div class="container-fluid">
-            <h3><a href="INDEX.html">RelieFlow</a></h3>
-            <div>
-                <ul>
+        <div class="container">
+            <div class="navbar-content">
+            <h3><a href="INDEX.html" class="navbar-brand">RelieFlow</a></h3>
+                <ul class="nav-list">
                     <li><a href="INDEX.html">Home</a></li>
                     <li><a href="#">About Us</a>
-                        <ul>
+                        <ul class="navbar-dropdown">
                             <li><a href="Team_Values.html">Our Team & Values</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Get Involved</a>
-                        <ul>
+                    <li><a href="#" class="active">Get Involved</a>
+                        <ul class="navbar-dropdown">
                             <li><a href="system.html">What We Do</a></li>
                             <li><a href="#">FAQs</a></li>
                             <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </li>
-                    <li><h3><a href="Donate.html">DONATE</a></h3></li>
+                    <li><h3><a href="Donate.html" class="donate-link">DONATE</a></h3></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <!-- Row 2: FAQs banner -->
     <header>
         <div class="container-fluid">
@@ -40,7 +41,7 @@
         </div>
     </header>
     <!-- Row 3: FAQs -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-10">
                 <table class="table table-bordered text-center">

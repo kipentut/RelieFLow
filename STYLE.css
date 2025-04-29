@@ -3,6 +3,71 @@
     }
     
     /* navbar */
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: #000 solid 3px;
+        border-radius: 40px;
+        padding: 10px 20px;
+        margin-top: 30px;
+    }
+    .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000; /* Black text */
+    }
+    .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px; /* Space between links */
+        margin: 0;
+        padding: 0;
+    }
+    .nav-list li {
+        display: inline;
+    }
+    .nav-list a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .nav-list a:hover {
+        background-color: #e0e0e0;
+        color: #007bff;
+    }
+    .nav-list a.active {
+        background-color: #007bff; /* Blue background for active link */
+        color: #fff; /* White text for active link */
+    }
+    .nav-list li:hover .navbar-dropdown {
+        display: block;
+    }
+    .navbar-dropdown {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+    }
+    .donate-link {
+        font-weight: bold;
+        color: #fff; /* White text */
+        background-color: #007bff; /* Blue background */
+        padding: 8px 15px;
+        border-radius: 10px; /* Rounded corners for the button */
+        transition: background-color 0.3s ease;
+    }
+    .donate-link:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+
     /* system.html;table */
     .answer {
         display: none;
