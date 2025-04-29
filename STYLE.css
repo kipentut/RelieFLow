@@ -67,8 +67,28 @@
     .donate-link:hover {
         background-color: #0056b3; /* Darker blue on hover */
     }
-
-
+    @media (max-width: 768px) {
+        .navbar-content {
+            flex-direction: column; /* Stack items vertically */
+            padding: 10px; /* Reduce padding for smaller screens */
+        }
+    
+        .nav-list {
+            flex-direction: column; /* Stack navigation links vertically */
+            gap: 10px; /* Reduce space between links */
+            align-items: center; /* Center align links */
+        }
+    
+        .nav-list a {
+            font-size: 16px; /* Reduce font size for smaller screens */
+            padding: 6px 10px; /* Adjust padding for smaller links */
+        }
+    
+        .donate-link {
+            padding: 6px 12px; /* Adjust padding for the donate button */
+            font-size: 16px; /* Reduce font size for the donate button */
+        }
+    }
     /* system.html;table */
     .answer {
         display: none;
