@@ -75,3 +75,7 @@
     table tr td:hover{
         background: #868484;
     }
+    /* Team & Values */
+    div#mems {
+        display: none;
+    }
