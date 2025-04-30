@@ -1,17 +1,24 @@
-    div#img {
-        background-color: blue;
+    div#main-container {
+        background-color: #a6cfb3; /* Light gray background for the main container */
+        padding: 5px; /* Padding around the main container */
+        border-radius: 10px; /* Rounded corners for the main container */
+        margin: 20px auto; /* Center the main container */
+        width: 85%; /* Maximum width of the main container */
     }
-    
+    .bg {
+        background-color: #4fa15d; /* Light gray background for the body */
+    }
     /* navbar */
     .navbar-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border: #000 solid 3px;
-        border-radius: 40px;
+        border-radius: 30px;
         padding: 10px 20px;
         margin-top: 30px;
         overflow: hidden; /* Prevent content from overflowing the border */
+        background-color: rgb(168, 204, 236);
     }
     .navbar-brand {
         font-size: 24px;
@@ -89,7 +96,49 @@
             font-size: 16px; /* Reduce font size for the donate button */
         }
     }
-    /* system.html;table */
+    /* Header */
+    header {
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+    /* Footer */
+    footer {
+        background-color: rgb(168, 204, 236); /* Black background */
+        color: #000; /* White text */
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 30px;
+        border: #000 solid 3px;
+        width: 85%;
+        margin: auto;
+    }
+    /* INDEX.html */
+    div#index {
+        background-image: url('indexbanner.jpg');
+        background-size: cover; /* Adjust the size of the background image */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        border-radius: 5px;
+        height: 400px;
+        padding: 20px 20px;
+        display: flex; /* Enable Flexbox */
+        flex-direction: column; /* Maintain the order of text */
+        justify-content: center; /* Center content vertically */
+        color: #67e462; /* Ensure text is visible on a dark background */
+        width: 100%;
+    }
+    div#mission, div#donation {
+        background-color: rgb(168, 204, 236);
+        height: 200px;
+        align-content: center;
+        border: #000 solid 2px;
+        border-radius: 10px;
+    }
+    div#mission-donation {
+        padding: 20px 20px;
+    }
+    /* FAQs.html */
     .answer {
         display: none;
     }
@@ -98,5 +147,9 @@
     }
     /* Team & Values */
     div#mems {
+        display: none;
+    }
+    /* system.html */
+    .steps {
         display: none;
     }
