@@ -1,12 +1,13 @@
-    div#main-container {
-        background-color: #a6cfb3; /* Light gray background for the main container */
+    #main-container {
+        background-color: #abc5b4;
         padding: 5px; /* Padding around the main container */
+        border: #000 solid 1px;
         border-radius: 10px; /* Rounded corners for the main container */
         margin: 20px auto; /* Center the main container */
         width: 85%; /* Maximum width of the main container */
     }
     .bg {
-        background-color: #4fa15d; /* Light gray background for the body */
+        background-color: #f6f6e9;
     }
     /* navbar */
     .navbar-content {
@@ -18,7 +19,7 @@
         padding: 10px 20px;
         margin-top: 30px;
         overflow: hidden; /* Prevent content from overflowing the border */
-        background-color: rgb(168, 204, 236);
+        background-color: #f6f6e9;
     }
     .navbar-brand {
         font-size: 24px;
@@ -46,34 +47,51 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
     .nav-list a:hover {
-        background-color: #e0e0e0;
-        color: #007bff;
+        background-color: #cae7d5;
+        color: #0a581e;
     }
     .nav-list a.active {
-        background-color: #007bff; /* Blue background for active link */
-        color: #fff; /* White text for active link */
+        background-color: #abc5b4; /* Blue background for active link */
+        color: #063d14; /* White text for active link */
     }
     .nav-list li:hover .navbar-dropdown {
-        display: block;
+        display: flex;
+        flex-direction: column; /* Stack dropdown items vertically */
     }
     .navbar-dropdown {
         position: absolute;
         background-color: #fff;
         border-radius: 5px;
         padding: 10px;
+        margin: 0;
         display: none;
+    }
+    .navbar-dropdown li {
+        margin-bottom: 10px; /* Add space between each dropdown item */
+    }
+    
+    .navbar-dropdown li:last-child {
+        margin-bottom: 0; /* Remove margin from the last item */
+    }
+    #main-link {
+        display: inline-block; /* Ensure it aligns inline with other elements */
+        vertical-align: middle; /* Align vertically with .donate-link */
+        padding: 8px 12px; /* Match the padding of .donate-link */
+        font-size: 18px; /* Match the font size of .donate-link */
+        font-weight: 500; /* Match the font weight of .donate-link */
+        text-decoration: none; /* Remove underline for consistency */
+        color: #000; /* Match the text color */
     }
     .donate-link {
         font-weight: bold;
         color: #fff; /* White text */
-        background-color: #007bff; /* Blue background */
-        padding: 8px 15px;
+        background-color: #3db489; /* Blue background */
+        padding: 8px 12px; /* Match padding with #main-link */
         border-radius: 10px; /* Rounded corners for the button */
         transition: background-color 0.3s ease;
+        vertical-align: middle; /* Align vertically with #main-link */
     }
-    .donate-link:hover {
-        background-color: #0056b3; /* Darker blue on hover */
-    }
+    
     @media (max-width: 768px) {
         .navbar-content {
             flex-direction: column; /* Stack items vertically */
@@ -103,7 +121,7 @@
     }
     /* Footer */
     footer {
-        background-color: rgb(168, 204, 236); /* Black background */
+        background-color: #f6f6e9; /* Black background */
         color: #000; /* White text */
         padding: 20px 0;
         text-align: center;
@@ -114,7 +132,7 @@
         margin: auto;
     }
     /* INDEX.html */
-    div#index {
+    #index {
         background-image: url('indexbanner.jpg');
         background-size: cover; /* Adjust the size of the background image */
         background-position: center; /* Center the background image */
@@ -125,18 +143,21 @@
         display: flex; /* Enable Flexbox */
         flex-direction: column; /* Maintain the order of text */
         justify-content: center; /* Center content vertically */
-        color: #67e462; /* Ensure text is visible on a dark background */
+        color: #f6f6e9; /* Ensure text is visible on a dark background */
         width: 100%;
     }
-    div#mission, div#donation {
-        background-color: rgb(168, 204, 236);
+    #mission, div#donation {
+        background-color: #f6f6e9;
         height: 200px;
         align-content: center;
         border: #000 solid 2px;
         border-radius: 10px;
     }
-    div#mission-donation {
+    #mission-donation {
         padding: 20px 20px;
+    }
+    #indexH1 {
+        font-size: 50px;
     }
     /* FAQs.html */
     .answer {
@@ -146,8 +167,68 @@
         background: #868484;
     }
     /* Team & Values */
-    div#mems {
+    #mems {
         display: none;
+        border: #000 solid 2px;
+        border-radius: 10px;
+        width: 40%;
+        background-color: #f6f6e9;
+        margin-bottom: 20px;
+    }
+    #clickclick {
+        margin: auto; /* Center horizontally */
+        display: flex; /* Enable Flexbox */
+        flex-direction: row; /* Stack images vertically */
+        padding: 10px 20px;
+        width: 70%;
+    }
+    .member-img {
+        width: 200px; /* Set a fixed width for the images */
+        height: 200px; /* Set a fixed height for the images */
+        border-radius: 50%; /* Make the images circular */
+        margin: 10px; /* Space between images */
+        border: 2px solid #000; /* Border around images */
+    }
+    #mems1 {
+        margin: auto;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        justify-content: center; /* Center images vertically */
+        padding: 20px; /* Padding around the images */
+    }
+    #AboutUs {
+        width: 80%;
+        padding: 20px;
+    }
+    #team-banner {
+        height: 200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+    }
+    #our-team-img, #our-aim-img {
+        width: 450px;
+        height: 300px;
+        border-radius: 5px;
+    }
+    #aboutus1, #aboutus2 {
+        display: flex;
+        flex-direction: row; /* Stack images vertically */
+        padding: 10px 20px;
+    }
+    .teamaim {
+        text-align: justify;
+    }
+    .DREAM {
+        font-size: 75px;
+    }
+    #OurTeam, #OurAim {
+        background-color: #f6f6e9;
+        border-radius: 20px;
+    }
+    .teamaimH3 {
+        padding: 20px 0px;
     }
     /* system.html */
     .steps {
