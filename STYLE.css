@@ -246,6 +246,7 @@
     }
     /* FAQs.html */
     #FAQs {
+        background-color: #7f9286;
         border-bottom: 5px solid #24442f; /* Add a bottom border */
         border-radius: 10px; /* Rounded corners */
         height: 200px;
