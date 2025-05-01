@@ -37,15 +37,15 @@
     <!-- Row 2: FAQs banner -->
     <header>
         <div class="container-fluid" id="FAQs">
-            <h1>Frequently Asked Questions</h1>
-            <h4>Find answers to your most frequently asked questions</h4>
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <h4>Helping you understand our mission and how you can get involved</h4>
         </div>
     </header>
     <!-- Row 3: FAQs -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="tables">
         <div class="row">
-            <div class="col-md-10">
-                <table class="table table-bordered text-center">
+            <div class="col-md-10" id="t1container">
+                <table class="table table-bordered" id="faq-table1">
                     <tr>
                         <th>GENERAL INFO</th>
                         <th>VOLUNTEERING & INVOLVEMENT</th>
@@ -53,7 +53,7 @@
                     <tr>
                         <td>
                             <p class="question" onclick="toggleAnswer('answer1')">What is RelieFlow?</p>
-                            <p id="answer1" class="answer">answer</p>
+                            <p id="answer1" class="answer">Our website aims to establish an efficient relief platform which resolves the pressing emergency requirement for improved disaster support systems throughout the Philippines. Our technological platform seeks to automate donation collection while streamlining charity distribution resulting in improved opportunities for helpful people and institutions to assist reconstruction efforts in disaster-affected areas. Our website operates as a universal hope source that matches those willing to help with people who need assistance thus guaranteeing total coverage during catastrophic events.</p>
                         </td>
                         <td>
                             <p class="question" onclick="toggleAnswer('answer4')">How can I volunteer?</p>
@@ -80,12 +80,12 @@
                             <p id="answer6" class="answer">answer</p>
                         </td>
                     </tr>
-                  </table>
+                </table>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10">
-                <table class="table table-bordered text-center">
+            <div class="col-md-10" id="t2container">
+                <table class="table table-bordered text-center" id="faq-table2">
                     <tr>
                         <th>DONATIONS</th>
                         <th>RECEIVING HELP</th>
@@ -136,7 +136,7 @@
         function toggleAnswer(answerId) {
             const answer = document.getElementById(answerId);
             if (answer.style.display === "none") {
-                answer.style.display = "block";
+                answer.style.display = "flex";
             } else {
                 answer.style.display = "none";
             }

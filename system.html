@@ -36,8 +36,8 @@
 
     <!-- Row 2: System -->
     <header>
-        <div class="container-fluid" id="system">
-            <h1>Our System:</h1>
+        <div class="container-fluid text-center" id="system-banner">
+            <h1 class="DREAM">Our System</h1>
             <h4>How we move your donation</h4>
         </div>
     </header>
@@ -46,18 +46,28 @@
         <div class="row">
             <div class="col-md-8" id="stepss1">
                 <h3 onclick="ToggleStep('step1')">Step 1: Donation Collection</h3>
-                <p class="steps" id="step1">We collect donations through our secure online platform, ensuring that every contribution is safe and accounted for.</p>
+                <div class="steps" id="step1">
+                    <p>We collect donations through our secure online platform, ensuring that every contribution is safe and accounted for.</p>
+                    <img src="System-step1.jpg" alt="Collection" id="Collection-img" class="steps-img">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8" id="stepss2">
                 <h3 onclick="ToggleStep('step2')">Step 2: Relief Good Procurement</h3>
-                <p class="steps" id="step2">We procure essential goods and services needed for disaster relief, focusing on the most urgent needs of affected communities.</p>
+                <div class="steps" id="step2">
+                    <p>We procure essential goods with a fixed cost for a efficient distribution, focusing on the most urgent needs of affected communities.</p>
+                    <img src="System-step2.png" alt="Procurement" id="Procurement-img" class="steps-img">
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-8" id="stepss3">
-                <h3 onclick="ToggleStep('step3')">Step 3: Ditribution to Evacuation Centers</h3>
-                <p class="steps" id="step3">We distribute the procured goods to evacuation centers and affected areas, ensuring that help reaches those who need it most.</p>
+                <h3 onclick="ToggleStep('step3')">Step 3: Ditribution</h3>
+                <div class="steps" id="step3">
+                    <p>We distribute the procured goods to evacuation centers and affected areas, ensuring that help reaches those who need it most.</p>
+                    <img src="System-step3.jpg" alt="Distribution" id="distribution-img" class="steps-img">
+                </div>
             </div>
         </div>
     </div>

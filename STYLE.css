@@ -1,10 +1,24 @@
     #main-container {
         background-color: #abc5b4;
         padding: 5px; /* Padding around the main container */
-        border: #000 solid 1px;
         border-radius: 10px; /* Rounded corners for the main container */
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
         margin: 20px auto; /* Center the main container */
         width: 85%; /* Maximum width of the main container */
+        position: relative; /* Ensure proper positioning for animation */
+        animation: slideDown 2s ease-out; /* Apply the slide-down animation */
+    }
+
+    /* Keyframes for the slide-down animation */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%); /* Start above the viewport */
+            opacity: 0; /* Start fully transparent */
+        }
+        to {
+            transform: translateY(0); /* End at its original position */
+            opacity: 1; /* End fully visible */
+        }
     }
     .bg {
         background-color: #f6f6e9;
@@ -91,29 +105,6 @@
         transition: background-color 0.3s ease;
         vertical-align: middle; /* Align vertically with #main-link */
     }
-    
-    @media (max-width: 768px) {
-        .navbar-content {
-            flex-direction: column; /* Stack items vertically */
-            padding: 10px; /* Reduce padding for smaller screens */
-        }
-    
-        .nav-list {
-            flex-direction: column; /* Stack navigation links vertically */
-            gap: 10px; /* Reduce space between links */
-            align-items: center; /* Center align links */
-        }
-    
-        .nav-list a {
-            font-size: 16px; /* Reduce font size for smaller screens */
-            padding: 6px 10px; /* Adjust padding for smaller links */
-        }
-    
-        .donate-link {
-            padding: 6px 12px; /* Adjust padding for the donate button */
-            font-size: 16px; /* Reduce font size for the donate button */
-        }
-    }
     /* Header */
     header {
         padding: 20px 0;
@@ -131,6 +122,9 @@
         width: 85%;
         margin: auto;
     }
+
+    /* CSS CODES DESIGNED FOR EACH PAGE */
+
     /* INDEX.html */
     #index {
         background-image: url('indexbanner.jpg');
@@ -159,14 +153,7 @@
     #indexH1 {
         font-size: 50px;
     }
-    /* FAQs.html */
-    .answer {
-        display: none;
-    }
-    table tr td:hover{
-        background: #868484;
-    }
-    /* Team & Values */
+    /* Team&Values.html */
     #mems {
         display: none;
         border: #000 solid 2px;
@@ -231,6 +218,154 @@
         padding: 20px 0px;
     }
     /* system.html */
+    #system-banner {
+        height: 200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+    }
     .steps {
         display: none;
+    }
+    .steps-img {
+        width: 300px; /* Set a fixed width for the images */
+        height: 300px; /* Set a fixed height for the images */
+        margin: 10px; /* Space between images */
+    }
+    #stepss1, #stepss2, #stepss3 {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        margin: 20px auto; /* Add spacing between the elements and center them */
+        text-align: center;
+        padding: 20px; /* Add internal spacing */
+        width: 65%; /* Ensure consistent width */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+        background-color: #f6f6e9; /* Light background color */
+    }
+    /* FAQs.html */
+    #FAQs {
+        border-bottom: 5px solid #24442f; /* Add a bottom border */
+        border-radius: 10px; /* Rounded corners */
+        height: 200px;
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        margin: auto; /* Center the element horizontally */
+        width: 70%; /* Set a consistent width for the FAQ section */
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+    }
+    .answer {
+        display: none; /* Initially hidden */
+        text-align: justify; /* Center the text horizontally */
+        margin: 0 auto; /* Center the element horizontally */
+        width: 90%; /* Set a consistent width for the answer */
+        padding: 10px; /* Add internal spacing */
+    }
+    #t1container, #t2container {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        margin: 20px auto; /* Center the tables horizontally and add vertical spacing */
+        width: 80%; /* Set a consistent width for the tables */
+    }
+    #faq-table1, #faq-table2 {
+        margin: 20px auto; /* Center the tables horizontally and add vertical spacing */
+        width: 80%; /* Set a consistent width for the tables */
+        border-collapse: collapse; /* Remove spacing between table cells */
+        text-align: center; /* Center-align the text inside the tables */
+        background-color: #f6f6e9; /* Light background color */
+        border: 2px solid #000; /* Add a border around the tables */
+        border-radius: 10px; /* Rounded corners for the tables */
+    }
+    #faq-table1 th, #faq-table1 td, #faq-table2 th, #faq-table2 td {
+        width: 50%; /* Ensure all columns are the same width */
+        padding: 15px; /* Add padding inside the cells */
+        border: 1px solid #000; /* Add borders to table cells */
+        vertical-align: middle; /* Vertically center the content */
+    }
+    #faq-table1 th, #faq-table2 th {
+        background-color: #abc5b4;
+    }
+    table tr td:hover{
+        background: #f6f6e9;
+    }
+    /* DONATE.html */
+    /* FOR MOBILE DEVICES */
+    @media (max-width: 768px) {
+        .navbar-content {
+            flex-direction: column; /* Stack items vertically */
+            padding: 10px; /* Reduce padding for smaller screens */
+        }
+    
+        .nav-list {
+            flex-direction: column; /* Stack navigation links vertically */
+            gap: 10px; /* Reduce space between links */
+            align-items: center; /* Center align links */
+        }
+    
+        .nav-list a {
+            font-size: 16px; /* Reduce font size for smaller screens */
+            padding: 6px 10px; /* Adjust padding for smaller links */
+        }
+    
+        .donate-link {
+            padding: 6px 12px; /* Adjust padding for the donate button */
+            font-size: 16px; /* Reduce font size for the donate button */
+        }
+    
+        #index {
+            height: auto; /* Adjust height for smaller screens */
+            padding: 15px; /* Reduce padding */
+            font-size: 18px; /* Adjust font size for smaller screens */
+        }
+    
+        #mission, div#donation {
+            height: auto; /* Allow content to dictate height */
+            padding: 15px; /* Adjust padding */
+            font-size: 16px; /* Adjust font size */
+        }
+    
+        #FAQs {
+            width: 90%; /* Adjust width for smaller screens */
+            padding: 15px; /* Adjust padding */
+            font-size: 16px; /* Adjust font size */
+        }
+    
+        #faq-table1, #faq-table2 {
+            width: 100%; /* Make tables full width */
+            font-size: 14px; /* Reduce font size for smaller screens */
+        }
+    
+        .steps-img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+        .answer {
+            width: 100%; /* Adjust width for smaller screens */
+            padding: 10px; /* Adjust padding */
+            font-size: 14px; /* Adjust font size */
+        }
+    
+        #t1container, #t2container {
+            width: 100%; /* Adjust width for smaller screens */
+            margin: 10px auto; /* Adjust margin */
+        }
+    
+        #main-container {
+            width: 95%; /* Adjust width for smaller screens */
+            padding: 10px; /* Adjust padding */
+        }
+    
+        #team-banner, #system-banner {
+            height: auto; /* Allow content to dictate height */
+            padding: 15px; /* Adjust padding */
+        }
+    
+        .member-img {
+            width: 150px; /* Adjust image size for smaller screens */
+            height: 150px; /* Maintain aspect ratio */
+        }
     }
