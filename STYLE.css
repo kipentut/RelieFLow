@@ -368,4 +368,24 @@
             width: 150px; /* Adjust image size for smaller screens */
             height: 150px; /* Maintain aspect ratio */
         }
+        #our-aim-img, #our-team-img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #aboutus1, #aboutus2 {
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
+        }
+        #mems1 {
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
+        }
+        #clickclick {
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
+        }
+        #mems {
+            width: 90%; /* Adjust width for smaller screens */
+            padding: 10px; /* Adjust padding */
+        }
     }
