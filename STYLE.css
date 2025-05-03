@@ -47,6 +47,7 @@
         gap: 20px; /* Space between links */
         margin: 0;
         padding: 0;
+        z-index: 1; /* Place it above #qrcodeholder */
     }
     .nav-list li {
         display: inline;
@@ -294,67 +295,54 @@
     }
 
     /* DONATE.html */
-#qrcodeholder:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-}
-
-/* QR Code image styling */
-/* QR Code container styling */
-#qrcodeholder {
-    width: 90%; /* Adjusted width for better fit */
-    height: auto; /* Allow height to adjust dynamically */
-    margin: 20px auto;
-    padding: 20px;
-    border: 5px solid rgb(9, 165, 100); /* Add a border around the QR code */
-    border-radius: 20px; /* Rounded corners for the container */
-    background-color: #3db489; /* Light background color */
-    box-shadow: 0 0 25px rgba(7, 165, 100,); /* Outer glow effect */
-    display: flex; /* Enable Flexbox for centering */
-    flex-direction: row; /* Stack items horizontally */
-    justify-content: center;
-    align-items: center;
-    animation: float 3s ease-in-out infinite; /* Floating animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#qrcodeholder:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 0 40px rgba(6, 230, 92, 0.7); /* Enhanced glow on hover */
-}
-
-/* QR Code image styling */
-#qrcode {
-    width: 250px; /* Adjusted size for better fit */
-    height: 250px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(23, 132, 31, 0.349);
-    transition: box-shadow 0.4s ease;
-}
-
-#qrcode:hover {
-    box-shadow: 0 0 30px rgb(5, 102, 11);
-}
-
-/* Headings styling */
-#qrcodeholder h3 {
-    color: #000000;
-    font-size: 1.5rem; /* Adjusted font size */
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-/* Floating animation for the QR code container */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0); /* Start and end at the original position */
+    #qrcodeholder:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
     }
-    50% {
-        transform: translateY(-10px); /* Move up slightly */
+    #qrcodeholder {
+        width: 90%; /* Adjusted width for better fit */
+        height: auto; /* Allow height to adjust dynamically */
+        margin: 20px auto;
+        padding: 20px;
+        border: 5px solid rgb(9, 165, 100); /* Add a border around the QR code */
+        border-radius: 20px; /* Rounded corners for the container */
+        background-color: #3db489; /* Light background color */
+        box-shadow: 0 0 25px rgba(7, 165, 100,); /* Outer glow effect */
+        display: flex; /* Enable Flexbox for centering */
+        justify-content: center;
+        align-items: center;
+        animation: float 3s ease-in-out infinite; /* Floating animation */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; /* Ensure proper stacking context */
+        z-index: 0; /* Place it behind .nav-list */
     }
-}
+    #qrcodeholder:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 0 40px rgba(6, 230, 92, 0.7); /* Enhanced glow on hover */
+    }
+    #qrcode {
+        width: 250px; /* Adjusted size for better fit */
+        height: 250px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(23, 132, 31, 0.349);
+        transition: box-shadow 0.4s ease;
+    }
+
+    #qrcode:hover {
+        box-shadow: 0 0 30px rgb(5, 102, 11);
+    }
+    #qrcodeholder h3 {
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0); /* Start and end at the original position */
+        }
+        50% {
+            transform: translateY(-10px); /* Move up slightly */
+        }
+    }
 
 
     /* FOR MOBILE DEVICES */
@@ -369,66 +357,65 @@
             gap: 10px; /* Reduce space between links */
             align-items: center; /* Center align links */
         }
-    
         .nav-list a {
             font-size: 16px; /* Reduce font size for smaller screens */
             padding: 6px 10px; /* Adjust padding for smaller links */
         }
-    
         .donate-link {
             padding: 6px 12px; /* Adjust padding for the donate button */
             font-size: 16px; /* Reduce font size for the donate button */
         }
-    
+        #qrcodeholder {
+            width: 100%; /* Make it responsive for smaller screens */
+            padding: 15px; /* Adjust padding */
+            border-radius: 15px; /* Slightly reduce border radius */
+            box-shadow: 0 0 15px rgba(7, 165, 100, 0.5); /* Adjust shadow for smaller screens */
+            z-index: 0; /* Ensure it stays behind .nav-list */
+        }
+        #qrcode {
+            width: 200px; /* Adjust size for smaller screens */
+            height: 200px;
+        }
         #index {
             height: auto; /* Adjust height for smaller screens */
             padding: 15px; /* Reduce padding */
             font-size: 18px; /* Adjust font size for smaller screens */
         }
-    
         #mission, div#donation {
             height: auto; /* Allow content to dictate height */
             padding: 15px; /* Adjust padding */
             font-size: 16px; /* Adjust font size */
         }
-    
         #FAQs {
             width: 90%; /* Adjust width for smaller screens */
             padding: 15px; /* Adjust padding */
             font-size: 16px; /* Adjust font size */
         }
-    
         #faq-table1, #faq-table2 {
             width: 100%; /* Make tables full width */
             font-size: 14px; /* Reduce font size for smaller screens */
         }
-    
         .steps-img {
             width: 100%; /* Make images responsive */
             height: auto; /* Maintain aspect ratio */
         }
-    
         .answer {
             width: 100%; /* Adjust width for smaller screens */
             padding: 10px; /* Adjust padding */
             font-size: 14px; /* Adjust font size */
         }
-    
         #t1container, #t2container {
             width: 100%; /* Adjust width for smaller screens */
             margin: 10px auto; /* Adjust margin */
         }
-    
         #main-container {
             width: 95%; /* Adjust width for smaller screens */
             padding: 10px; /* Adjust padding */
         }
-    
         #team-banner, #system-banner {
             height: auto; /* Allow content to dictate height */
             padding: 15px; /* Adjust padding */
         }
-    
         .member-img {
             width: 150px; /* Adjust image size for smaller screens */
             height: 150px; /* Maintain aspect ratio */
